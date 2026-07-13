@@ -96,7 +96,8 @@ h1,h2,h3{font-family:var(--ff-serif);font-weight:600;line-height:1.12;letter-spa
 .header.scrolled{box-shadow:0 10px 30px -12px rgba(10,23,38,.5)}
 .header__inner{display:flex;align-items:center;justify-content:space-between;height:74px}
 .brand img{height:44px;width:auto}
-.header .btn{padding:12px 22px;font-size:.72rem}
+.header .btn{padding:12px 22px;font-size:.72rem;white-space:nowrap}
+.btn-short{display:none}
 
 /* ---------- Hero ---------- */
 .hero{
@@ -372,11 +373,16 @@ h1,h2,h3{font-family:var(--ff-serif);font-weight:600;line-height:1.12;letter-spa
 }
 @media(max-width:640px){
   .rights-grid,.benefit-grid,.steps-grid,.footer__grid,.cred-grid{grid-template-columns:1fr}
-  .header .btn{padding:11px 16px;font-size:.66rem}
-  .brand img{height:36px}
-  .hero{padding-top:calc(74px + 44px)}
+  .header .btn{padding:9px 14px;font-size:.66rem;gap:6px;white-space:nowrap}
+  .header .btn svg{width:15px;height:15px}
+  .btn-full{display:none}
+  .btn-short{display:inline}
+  .brand img{height:32px}
+  .hero{padding-top:calc(64px + 44px)}
+  .header__inner{height:64px}
   .rcard{width:280px}
   .btn{white-space:normal;text-align:center}
+  .header .btn{white-space:nowrap}
   .footer__bottom{justify-content:center;text-align:center}
 }
 @media(prefers-reduced-motion:reduce){
